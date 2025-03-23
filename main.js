@@ -54,6 +54,7 @@ app.post('/ai',(req,res) =>{
             }  
         }   
         res.json(out);
+        out="";
     }
     run();
 });

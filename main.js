@@ -27,8 +27,8 @@ app.use(cors({
 }));
 let out="";
 
-// app.post('/ai',(req,res) =>{
-    // const { code, planguage, language } = req.body;
+app.post('/ai',(req,res) =>{
+    const { code, planguage, language } = req.body;
     const code = "Who is elon musk";
     const planguage = "python";
     const language = "hindi";
@@ -59,11 +59,11 @@ let out="";
             }  
         }   
         console.log(out);
-        // res.json(out);
+        res.json(out);
         out="";
     }
     run();
-// });
+});
 
 app.post('/output', async (req, res) => {
     const { code, language } = req.body;
